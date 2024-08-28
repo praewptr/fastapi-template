@@ -64,6 +64,11 @@ frontend:
   help: Do you want to include the frontend folder?
   default: false
 
+use_precommit:
+    type: bool
+    default: false
+    help: Do you want to use pre-commit?
+
 
 _exclude:
   # Global
@@ -81,9 +86,6 @@ _exclude:
   - .cache
   - .venv
   # Frontend
-  [% if not frontend %]
-  - frontend
-  [% endif %]
   # Logs
   - logs
   - "*.log"
