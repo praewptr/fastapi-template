@@ -87,7 +87,7 @@ _exclude:
   - .cache
   - .venv
   # Frontend
-  "{% if not frontend %}frontend{% endif %}"
+  - "{% if not frontend %}frontend{% endif %}"
   # Logs
   - logs
   - "*.log"
