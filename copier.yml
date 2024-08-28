@@ -69,6 +69,8 @@ use_precommit:
     default: false
     help: Do you want to use pre-commit?
 
+_templates_suffix: .jinja
+
 _exclude:
   # Global
   - .vscode
@@ -86,7 +88,6 @@ _exclude:
   - .venv
   # Frontend
   "{% if not frontend %}frontend{% endif %}"
-
   # Logs
   - logs
   - "*.log"
