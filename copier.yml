@@ -64,16 +64,6 @@ frontend:
   help: Do you want to include the frontend folder?
   default: false
 
-_templates_suffix: .jinja
-_envops:
-  block_end_string: "%}"
-  block_start_string: "{%"
-  comment_end_string: "#}"
-  comment_start_string: "{#"
-  keep_trailing_newline: true
-  variable_end_string: "}}"
-  variable_start_string: "{{"
-
 _exclude:
   # Global
   - .vscode
@@ -90,7 +80,7 @@ _exclude:
   - .cache
   - .venv
   # Frontend
-  - "{% if not frontend %}frontend{% endif %}"
+  - "[% if not frontend %}frontend{% endif %]"
   # Logs
   - logs
   - "*.log"
